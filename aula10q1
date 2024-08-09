@@ -1,0 +1,19 @@
+nomes = []
+precos = []
+
+for i in range(5):
+    nome = input(f"Digite o nome do medicamento {i + 1}: ")
+    preco = float(input(f"Digite o preço do medicamento {i + 1}: "))
+
+    nomes_medicamentos.append(nome)
+    precos_medicamentos.append(preco)
+
+preco_minimo = min(precos_medicamentos)
+indice_medicamento_barato = precos_medicamentos.index(preco_minimo)
+medicamento_barato = nomes_medicamentos[indice_medicamento_barato]
+
+media_precos = sum(precos_medicamentos) / len(precos_medicamentos)
+
+
+print(f"O medicamento mais barato é: {medicamento_barato} com o preço de R${preco_minimo:.2f}")
+print(f"A média dos preços informados é: R${media_precos:.2f}")
